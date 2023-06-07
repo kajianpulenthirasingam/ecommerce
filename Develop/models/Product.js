@@ -49,15 +49,3 @@ Product.init(
 
 module.exports = Product;
 
-const Category = require('./Category');
-const Tag = require('./Tag');
-
-Product.belongsTo(Category, {
-  foreignKey: 'category_id',
-});
-
-Product.belongsToMany(Tag, {
-  through: 'product_tag',
-  foreignKey: 'product_id',
-});
-
